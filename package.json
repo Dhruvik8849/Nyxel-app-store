@@ -1,0 +1,12 @@
+{
+  "name": "nyxel-app-store",
+  "version": "1.0.0",
+  "description": "Nyxel App Store - demo",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
