@@ -138,7 +138,8 @@ document.addEventListener('DOMContentLoaded', async ()=>{
     // Replace the preview image with a single large download button (keep only this)
     const previewEl = availableEl.querySelector('.available-preview');
     if(previewEl){
-      previewEl.innerHTML = '<a class="download-large glow-btn" href="/download?id=' + encodeURIComponent(customApp.id) + '" target="_blank" rel="noopener noreferrer">Download Now</a>';
+      // Link directly to the static APK file and suggest a user-friendly filename
+      previewEl.innerHTML = '<a class="download-large glow-btn" href="/APP_apk_file.apk" download="Nyxel_img_secure.apk" target="_blank" rel="noopener noreferrer">Download Now</a>';
     }
     // Remove the smaller inline action so only one Download button remains
     const actionEl = availableEl.querySelector('.available-action');
@@ -189,9 +190,19 @@ document.addEventListener('DOMContentLoaded', async ()=>{
     const ratingEl = document.getElementById('app-rating'); if(ratingEl) ratingEl.textContent = (appMeta.rating || 0).toFixed(1);
     const downloadBtn = document.getElementById('download-btn');
     if(downloadBtn){
-      downloadBtn.href = '/download?id=' + encodeURIComponent(appMeta.id);
-      // Remove client-side `download` so the server-provided filename is used
-      downloadBtn.removeAttribute('download');
+      // Prefer linking directly to the APK when available as a static file.
+      if (appMeta.apk && !/^https?:\/\//i.test(appMeta.apk)) {
+        downloadBtn.href = '/' + appMeta.apk.replace(/^\//, '');
+      } else {
+        // fallback to original download endpoint when apk is a remote URL
+        downloadBtn.href = '/download?id=' + encodeURIComponent(appMeta.id);
+      }
+      // For the Nyxel app, suggest the corrected filename to the browser
+      if (String(appMeta.id) === 'nyxel-image') {
+        downloadBtn.setAttribute('download', 'Nyxel_img_secure.apk');
+      } else {
+        downloadBtn.removeAttribute('download');
+      }
       downloadBtn.target = '_blank';
       downloadBtn.rel = 'noopener noreferrer';
     }
