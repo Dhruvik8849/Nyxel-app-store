@@ -7,7 +7,8 @@
 
 async function fetchApps(){
   try{
-    const res = await fetch('/api/apps');
+    // Use a static JSON file for deployments without a Node backend
+    const res = await fetch('/api/apps.json');
     if(!res.ok) throw new Error('Failed to fetch apps');
     return await res.json();
   }catch(err){
@@ -41,7 +42,11 @@ function createAvailableHTML(app){
   const features = (app.features && app.features.length) ? app.features : [
     'Reliable offline mode', 'Fast startup', 'Secure storage'
   ];
-  const downloadBtn = app.status === 'live' ? `<a class="glow-btn big" href="/download?id=${encodeURIComponent(app.id)}">Download Now</a>` : `<div class="badge-small">Not Available</div>`;
+  // prefer a static APK path when available; otherwise fall back to /download
+  let downloadHref = '/download?id=' + encodeURIComponent(app.id);
+  if (app.apk && !/^https?:\/\//i.test(app.apk)) downloadHref = '/' + app.apk.replace(/^\//, '');
+  const downloadAttr = String(app.id) === 'nyxel-image' ? ' download="Nyxel_img_secure.apk"' : '';
+  const downloadBtn = app.status === 'live' ? `<a class="glow-btn big" href="${downloadHref}"${downloadAttr} target="_blank" rel="noopener noreferrer">Download Now</a>` : `<div class="badge-small">Not Available</div>`;
   return `
     <div class="available-block">
       <div class="available-left">
