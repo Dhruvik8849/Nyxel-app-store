@@ -30,6 +30,19 @@ async function main(){
   console.log('Copying', src, '->', out);
   await rimraf(out);
   await copyDir(src, out);
+  // Copy root media files (icons) into public/media so absolute /media/... paths work
+  const mediaOut = path.join(out, 'media');
+  await fs.mkdir(mediaOut, { recursive: true });
+  const iconFiles = ['ic_launcher_foreground.webp', 'ic_launcher_background.webp'];
+  for (const f of iconFiles) {
+    const srcF = path.join(repoRoot, f);
+    try {
+      await fs.copyFile(srcF, path.join(mediaOut, f));
+      console.log('Copied media', f);
+    } catch (e) {
+      // ignore missing icons
+    }
+  }
   console.log('Done. Files copied to', out);
 }
 
