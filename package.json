@@ -4,7 +4,7 @@
   "description": "Nyxel App Store - demo",
   "private": true,
   "scripts": {
-    "vercel-build": "echo static"
+    "vercel-build": "node ./scripts/copy-frontend.js"
   },
   "dependencies": {
     "express": "^4.18.2"

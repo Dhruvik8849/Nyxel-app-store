@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nyxel App Store</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand"><a href="/">
+          <img src="/media/ic_launcher_foreground.webp" alt="Nyxel App Store" class="brand-logo">
+          <span class="brand-text">Nyxel App Store</span>
+        </a></div>
+      <nav class="nav">
+        <a href="/">Home</a>
+        <a href="rating.html">Ratings</a>
+        <a href="about.html">About</a>
+        <a href="security.html">Security</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2 style="margin-top:18px">Support & FAQ</h2>
+
+    <section style="margin-top:12px">
+      <h4>FAQs</h4>
+      <div class="app-card">
+        <strong>How do I publish an app?</strong>
+        <p class="muted">Create a developer account, upload your APK, provide screenshots and release notes. The demo does not include a publisher UI.</p>
+      </div>
+      <div class="app-card">
+        <strong>Is Nyxel secure?</strong>
+        <p class="muted">We provide signature checks and mock scans. For production, enable HTTPS and server-side scanning.</p>
+      </div>
+      <div class="app-card">
+        <strong>How do I report an issue?</strong>
+        <p class="muted">Use the contact form or send an email to hello@nyxel.example with details and reproduction steps.</p>
+      </div>
+    </section>
+
+    <section style="margin-top:12px">
+      <h4>Report an Issue</h4>
+      <form class="app-card" onsubmit="event.preventDefault();alert('Report submitted (demo)')">
+        <input placeholder="App name or ID" style="width:100%;padding:10px;border-radius:8px;background:transparent;border:1px solid rgba(255,255,255,0.04)">
+        <textarea placeholder="Describe the issue" style="width:100%;padding:10px;border-radius:8px;margin-top:8px;background:transparent;border:1px solid rgba(255,255,255,0.04);min-height:120px"></textarea>
+        <div style="margin-top:8px"><button class="glow-btn">Submit Report</button></div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

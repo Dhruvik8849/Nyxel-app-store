@@ -1,0 +1,49 @@
+[
+  {
+    "id": "nyxel-image",
+    "name": "Nyxel Image Security",
+    "version": "1.0.1",
+    "description": "Protect and manage your images locally with strong encryption and secure sharing.",
+    "longDescription": "Nyxel Image Security protects your photos with advanced, on-device encryption designed for privacy-first users. Your images never leave your control — secured with modern cryptography and protected by multi-layer authentication.\n\nBuilt with a focus on speed, security, and simplicity, Nyxel ensures your personal and sensitive images stay private at all times.\n\nUnlike standard gallery apps, Nyxel is built with a security-first architecture, combining strong encryption with a clean, minimal interface.\n\nNo tracking. No data collection. No compromises.\n\nNyxel does not collect, store, or share your personal data. All encryption and processing happen entirely on your device.",
+    "features": [
+      "Encrypted on-device vault",
+      "PIN & biometric unlock",
+      "Secure share links",
+      "Image tamper detection"
+    ],
+    "icon": "/media/ic_launcher_foreground.webp",
+    "banner": "https://picsum.photos/seed/nyxel-image/1200/300",
+    "screenshots": [],
+    "apk": "APP_apk_file.apk",
+    "category": "Security",
+    "rating": 4.6,
+    "downloads": 1090,
+    "size": "18.9 MB",
+    "developer": "Nyxel Labs",
+    "status": "live"
+  },
+  {
+    "id": "1",
+    "name": "Aurora Notes",
+    "version": "2.4.1",
+    "description": "Minimal, markdown-first notes with offline sync.",
+    "longDescription": "Aurora Notes is a lightweight, privacy-focused note app built for speed. Write in markdown, sync selectively, and keep your data local-first. Ideal for developers and writers who want a distraction-free experience.",
+    "features": [
+      "Markdown-first editor",
+      "Offline-first sync and export",
+      "Lightweight and battery friendly",
+      "Encrypted local storage",
+      "Fast search and tagging"
+    ],
+    "icon": "https://picsum.photos/seed/aurora/128",
+    "banner": "https://picsum.photos/seed/aurora-banner/1200/300",
+    "screenshots": ["https://picsum.photos/seed/aurora1/800/450","https://picsum.photos/seed/aurora2/800/450","https://picsum.photos/seed/aurora3/800/450"],
+    "apk": "sample-app.apk",
+    "category": "Productivity",
+    "rating": 4.8,
+    "downloads": 245000,
+    "size": "12 MB",
+    "developer": "Lumen Labs",
+    "status": "live"
+  }
+]

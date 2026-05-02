@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nyxel App Store</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand"><a href="/">
+          <img src="/media/ic_launcher_foreground.webp" alt="Nyxel App Store" class="brand-logo">
+          <span class="brand-text">Nyxel App Store</span>
+        </a></div>
+      <nav class="nav">
+        <a href="/">Home</a>
+        <a href="rating.html">Ratings</a>
+        <a href="about.html">About</a>
+        <a href="security.html">Security</a>
+      </nav>
+      <button id="hamburger" class="hamburger" aria-label="Toggle sidebar">
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main class="container main-grid">
+    <section class="main-col">
+      <section id="hero" class="hero">
+        <div class="hero-inner">
+          <div class="hero-text">
+            <h1>Discover, Download, and Trust Apps with Nyxel</h1>
+            <p class="muted">A curated marketplace for independent Android apps — fast, transparent and developer-friendly.</p>
+            <!-- removed: search box, category select, and hero buttons -->
+          </div>
+          <div class="hero-art">
+            <img src="https://picsum.photos/seed/nyxel-hero/800/500" alt="Nyxel hero banner">
+          </div>
+        </div>
+      </section>
+
+      <section id="available-app" class="available-app">
+        <!-- Main available app block injected here -->
+      </section>
+
+      <!-- stats bar and featured apps removed as requested -->
+
+      <section id="all-apps-controls" class="controls">
+        <h4>Coming Soon / In Development</h4>
+        <div class="controls-row">
+          <div class="left">Showing <span id="apps-count">--</span> apps</div>
+          <div class="right">
+            <label class="small muted">Sort:</label>
+            <select id="sort-select">
+              <option value="featured">Featured</option>
+              <option value="rating">Top Rated</option>
+              <option value="downloads">Most Downloads</option>
+              <option value="newest">Newest</option>
+            </select>
+          </div>
+        </div>
+      </section>
+
+      <section id="coming-soon-grid" class="app-grid coming-soon-grid" aria-live="polite"></section>
+    </section>
+
+    <aside id="sidebar" class="sidebar">
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="left">
+        <a class="brand-link" href="/">Nyxel App Store</a>
+        <!-- <nav class="foot-nav">
+          <a href="about.html">About</a>
+          <a href="security.html">Security</a>
+          <a href="contact.html">Contact</a>
+          <a href="support.html">Support</a>
+        </nav> -->
+      </div>
+      <div class="right muted">© Nyxel Lab 2026 — All rights reserved</div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

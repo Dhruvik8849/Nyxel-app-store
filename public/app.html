@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nyxel App Store</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand"><a href="/">
+          <img src="/media/ic_launcher_foreground.webp" alt="Nyxel App Store" class="brand-logo">
+          <span class="brand-text">Nyxel App Store</span>
+        </a></div>
+      <nav class="nav">
+        <a href="/">Home</a>
+        <a href="rating.html">Ratings</a>
+        <a href="about.html">About</a>
+        <a href="security.html">Security</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="app-detail" class="app-detail-wrap">
+      <div style="flex:1">
+        <div class="app-detail">
+          <div class="icon-large"></div>
+          <div class="content">
+            <h1 id="app-name">Loading...</h1>
+            <div id="app-version" class="app-meta"></div>
+            <div id="app-desc" class="desc"></div>
+            <div class="actions" style="margin-top:16px">
+              <a id="download-btn" class="glow-btn" href="#">Download</a>
+            </div>
+          </div>
+        </div>
+
+        <div id="app-full-desc" style="margin-top:18px;color:var(--muted)"></div>
+      </div>
+
+      <aside style="width:320px">
+        <div class="widget">
+          <strong>Developer</strong>
+          <div id="app-dev" class="muted" style="margin-top:8px"></div>
+        </div>
+        <div class="widget">
+          <strong>Details</strong>
+          <ul class="stats-list">
+            <li>Category: <span id="app-cat" class="muted"></span></li>
+            <li>Size: <span id="app-size" class="muted"></span></li>
+            <li>Downloads: <span id="app-downloads" class="muted"></span></li>
+            <li>Rating: <span id="app-rating" class="muted"></span></li>
+          </ul>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

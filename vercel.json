@@ -1,11 +1,11 @@
 {
   "version": 2,
   "builds": [
-    { "src": "frontend/**/*", "use": "@vercel/static" }
+    { "src": "package.json", "use": "@vercel/static-build", "config": { "distDir": "public" } }
   ],
   "routes": [
-    { "src": "/", "dest": "/frontend/index.html" },
-    { "src": "(.*)", "dest": "/frontend/$1" }
+    { "src": "/", "dest": "/index.html" },
+    { "src": "(.*)", "dest": "/$1" }
   ],
   "cleanUrls": true
 }

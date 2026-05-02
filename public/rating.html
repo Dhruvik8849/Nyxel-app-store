@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nyxel App Store</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand"><a href="/">
+          <img src="/media/ic_launcher_foreground.webp" alt="Nyxel App Store" class="brand-logo">
+          <span class="brand-text">Nyxel App Store</span>
+        </a></div>
+      <nav class="nav">
+        <a href="/">Home</a>
+        <a href="rating.html">Ratings</a>
+        <a href="about.html">About</a>
+        <a href="security.html">Security</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section style="margin-top:18px;display:flex;gap:20px;align-items:flex-start">
+      <div style="flex:1">
+        <h2>Store Ratings</h2>
+        <div style="display:flex;gap:16px;align-items:center;margin-top:10px">
+          <div style="font-size:48px;font-weight:800"><span id="avg-rating">4.7</span></div>
+          <div>
+            <div class="muted">Average rating across Nyxel</div>
+            <div class="muted">Total reviews: <span id="total-reviews">1.2k+</span></div>
+          </div>
+        </div>
+
+        <div style="margin-top:18px">
+          <div style="display:flex;align-items:center;gap:10px"><span>5 ★</span><div style="background:rgba(255,255,255,0.03);flex:1;border-radius:6px;overflow:hidden"><div class="dist-bar" style="height:10px;width:80%;background:linear-gradient(90deg,#06b6d4,#8b5cf6)"></div></div><span class="muted">(<span>--</span>)</span></div>
+          <div style="display:flex;align-items:center;gap:10px;margin-top:6px"><span>4 ★</span><div style="background:rgba(255,255,255,0.03);flex:1;border-radius:6px;overflow:hidden"><div class="dist-bar" style="height:10px;width:60%;background:linear-gradient(90deg,#06b6d4,#8b5cf6)"></div></div><span class="muted">(<span>--</span>)</span></div>
+          <div style="display:flex;align-items:center;gap:10px;margin-top:6px"><span>3 ★</span><div style="background:rgba(255,255,255,0.03);flex:1;border-radius:6px;overflow:hidden"><div class="dist-bar" style="height:10px;width:30%;background:linear-gradient(90deg,#06b6d4,#8b5cf6)"></div></div><span class="muted">(<span>--</span>)</span></div>
+          <div style="display:flex;align-items:center;gap:10px;margin-top:6px"><span>2 ★</span><div style="background:rgba(255,255,255,0.03);flex:1;border-radius:6px;overflow:hidden"><div class="dist-bar" style="height:10px;width:10%;background:linear-gradient(90deg,#06b6d4,#8b5cf6)"></div></div><span class="muted">(<span>--</span>)</span></div>
+          <div style="display:flex;align-items:center;gap:10px;margin-top:6px"><span>1 ★</span><div style="background:rgba(255,255,255,0.03);flex:1;border-radius:6px;overflow:hidden"><div class="dist-bar" style="height:10px;width:5%;background:linear-gradient(90deg,#06b6d4,#8b5cf6)"></div></div><span class="muted">(<span>--</span>)</span></div>
+        </div>
+      </div>
+
+      <div style="width:420px">
+        <h3 style="margin-top:0">Recent Reviews</h3>
+        <div id="reviews-list">
+          <!-- Reviews injected by script -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>

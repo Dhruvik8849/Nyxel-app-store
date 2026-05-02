@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nyxel App Store</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header-inner">
+      <div class="brand"><a href="/">
+          <img src="/media/ic_launcher_foreground.webp" alt="Nyxel App Store" class="brand-logo">
+          <span class="brand-text">Nyxel App Store</span>
+        </a></div>
+      <nav class="nav">
+        <a href="/">Home</a>
+        <a href="rating.html">Ratings</a>
+        <a href="about.html">About</a>
+        <a href="security.html">Security</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2 style="margin-top:18px">Security & Trust</h2>
+    <p class="muted">Security is central to Nyxel. While this demo includes mock verification and scanning indicators, the production approach emphasizes layered checks, clear metadata and user education to reduce risk when installing APKs.</p>
+
+    <section style="margin-top:12px">
+      <h3>Security Layers</h3>
+      <div class="app-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));">
+        <div class="app-card"><strong>APK Signature Verification</strong><p class="muted">We verify signatures and show signature status to users before download.</p></div>
+        <div class="app-card"><strong>Malware Scan (Mock)</strong><p class="muted">Automated scanning flags suspicious payloads; flagged apps are marked for review.</p></div>
+        <div class="app-card"><strong>Secure Hosting</strong><p class="muted">Files are served from hardened storage with integrity checks.</p></div>
+      </div>
+    </section>
+
+    <section style="margin-top:12px">
+      <h3>Trust Indicators</h3>
+      <ul class="check-list">
+        <li>99.90% Safe Apps (aggregated scan result)</li>
+        <li>Verified Developers with contact information</li>
+        <li>Visible change logs and version history</li>
+      </ul>
+    </section>
+
+    <section style="margin-top:12px">
+      <h3>User Guidelines</h3>
+      <ul class="check-list">
+        <li>Always verify permissions before installing</li>
+        <li>Prefer apps with clear developer info and reviews</li>
+        <li>Install updates from trusted sources</li>
+      </ul>
+    </section>
+
+    <section style="margin-top:12px">
+      <h3>Terms & Conditions</h3>
+      <div class="app-card">
+        <p class="muted"><strong>App usage responsibility:</strong> Users are responsible for reviewing permissions and app source. Nyxel provides metadata and scanning indicators but does not guarantee app behavior. <strong>No liability:</strong> Nyxel disclaims liability for damages resulting from app usage. <strong>Data:</strong> This demo does not collect personal data; production deployments should include clear privacy notices.</p>
+      </div>
+    </section>
+  </main>
+
+</body>
+</html>
